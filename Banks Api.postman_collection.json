@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "9ecfb2f4-4d62-4bfc-95c3-2ba23ab42ed7",
+		"name": "Banks Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "john",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/spots/Downloads/lulu_hat_png_by_amckam_ddy4qbn-pre.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"john\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJqb2huIiwiaW1hZ2UiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbWVkaWEvMTY1MzU2NDYzMTQ5NWx1bHVfaGF0X3BuZ19ieV9hbWNrYW1fZGR5NHFibi1wcmUucG5nIiwiYmFsYW5jZSI6MCwiZXhwIjoxNjUzNTczNjMxNDk5LCJpYXQiOjE2NTM1NjQ2MzF9.Fwgm0IIqvXp2mHTYFVTu2_INjEjKrZgNT6tw97-oNso",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJqb2huIiwiaW1hZ2UiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbWVkaWEvMTY1MzU2NDYzMTQ5NWx1bHVfaGF0X3BuZ19ieV9hbWNrYW1fZGR5NHFibi1wcmUucG5nIiwiYmFsYW5jZSI6MCwiZXhwIjoxNjUzNTczNjMxNDk5LCJpYXQiOjE2NTM1NjQ2MzF9.Fwgm0IIqvXp2mHTYFVTu2_INjEjKrZgNT6tw97-oNso",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJqb2huIiwiaW1hZ2UiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbWVkaWEvMTY1MzU2NDYzMTQ5NWx1bHVfaGF0X3BuZ19ieV9hbWNrYW1fZGR5NHFibi1wcmUucG5nIiwiYmFsYW5jZSI6MCwiZXhwIjoxNjUzNTczNjMxNDk5LCJpYXQiOjE2NTM1NjQ2MzF9.Fwgm0IIqvXp2mHTYFVTu2_INjEjKrZgNT6tw97-oNso",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 15\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/transfer/john2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"transfer",
+						"john2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
