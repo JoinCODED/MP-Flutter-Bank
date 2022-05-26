@@ -4,4 +4,4 @@
 
 [Trello Board](https://trello.com/b/mVEzbDuS/bank-api)
 
-[Postman Collection]()
+[Postman Collection](https://github.com/JoinCODED/MP-Flutter-Bank/blob/main/Banks%20Api.postman_collection.json)
